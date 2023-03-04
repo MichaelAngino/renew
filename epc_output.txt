@@ -1,0 +1,70 @@
+
+Built in Release mode using commit ce8a3cae1 on branch master.
+
+
+---  Software Radio Systems EPC  ---
+
+Couldn't open , trying /root/.config/srsran/epc.conf
+Couldn't open /root/.config/srsran/epc.conf either, trying /etc/srsran/epc.conf
+Reading configuration file /etc/srsran/epc.conf...
+Couldn't open user_db.csv, trying /root/.config/srsran/user_db.csv
+Couldn't open /root/.config/srsran/user_db.csv either, trying /etc/srsran/user_db.csv
+HSS Initialized.
+MME S11 Initialized
+MME GTP-C Initialized
+MME Initialized. MCC: 0xf901, MNC: 0xff70
+SPGW GTP-U Initialized.
+SPGW S11 Initialized.
+SP-GW Initialized.
+Received S1 Setup Request.
+S1 Setup Request - eNB Name: srsenb01, eNB id: 0x19b
+S1 Setup Request - MCC:901, MNC:70
+S1 Setup Request - TAC 7, B-PLMN 0x9f107
+S1 Setup Request - Paging DRX v128
+Sending S1 Setup Response
+Initial UE message: LIBLTE_MME_MSG_TYPE_TRACKING_AREA_UPDATE_REQUEST
+Received Initial UE message -- Tracking Area Update Request
+Tracking Area Update Request -- S-TMSI 0x8a735492
+Tracking Area Update Request -- eNB UE S1AP Id 1
+Warning: Tracking area update requests are not handled yet.
+Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
+Received Initial UE message -- Attach Request
+Attach request -- M-TMSI: 0x8a735492
+Attach request -- eNB-UE S1AP Id: 2
+Attach request -- Attach type: 2
+Attach Request -- UE Network Capabilities EEA: 11110000
+Attach Request -- UE Network Capabilities EIA: 01110000
+Attach Request -- MS Network Capabilities Present: true
+PDN Connectivity Request -- EPS Bearer Identity requested: 0
+PDN Connectivity Request -- Procedure Transaction Id: 60
+PDN Connectivity Request -- ESM Information Transfer requested: false
+UL NAS: Received Identity Response
+ID Response -- IMSI: 901700000016943
+Downlink NAS: Sent Authentication Request
+UL NAS: Authentication Failure
+Authentication Failure -- Synchronization Failure
+Downlink NAS: Sent Authentication Request
+UL NAS: Received Authentication Response
+Authentication Response -- IMSI 901700000016943
+UE Authentication Accepted.
+Generating KeNB with UL NAS COUNT: 0
+Downlink NAS: Sending NAS Security Mode Command.
+UL NAS: Received Security Mode Complete
+Security Mode Command Complete -- IMSI: 901700000016943
+Getting subscription information -- QCI 9
+Sending Create Session Request.
+Creating Session Response -- IMSI: 901700000016943
+Creating Session Response -- MME control TEID: 1
+Received GTP-C PDU. Message type: GTPC_MSG_TYPE_CREATE_SESSION_REQUEST
+SPGW: Allocated Ctrl TEID 1
+SPGW: Allocated User TEID 1
+SPGW: Allocate UE IP 172.16.0.2
+Received Create Session Response
+Create Session Response -- SPGW control TEID 1
+Create Session Response -- SPGW S1-U Address: 127.0.1.100
+SPGW Allocated IP 172.16.0.2 to IMSI 901700000016943
+Adding attach accept to Initial Context Setup Request
+Sent Initial Context Setup Request. E-RAB id 5 
+Received Initial Context Setup Response
+E-RAB Context Setup. E-RAB id 5
+E-RAB Context -- eNB TEID 0x1; eNB GTP-U Address 127.0.1.1
