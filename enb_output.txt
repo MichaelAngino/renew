@@ -48,7 +48,25 @@ Tx antenna set to TRX
 ==== eNodeB started ===
 Type <t> to view trace
 Setting frequency: DL=2680.0 Mhz, UL=2560.0 MHz for cc_idx=0 nof_prb=50
-RACH:  tti=3671, cc=0, pci=1, preamble=17, offset=12, temp_crnti=0x46
-RACH:  tti=3571, cc=0, pci=1, preamble=2, offset=12, temp_crnti=0x47
+RACH:  tti=3371, cc=0, pci=1, preamble=23, offset=12, temp_crnti=0x46
+RACH:  tti=3271, cc=0, pci=1, preamble=49, offset=10, temp_crnti=0x47
 User 0x47 connected
 Disconnecting rnti=0x46.
+Disconnecting rnti=0x47.
+RACH:  tti=3901, cc=0, pci=1, preamble=12, offset=12, temp_crnti=0x48
+User 0x48 connected
+Disconnecting rnti=0x48.
+RACH:  tti=9001, cc=0, pci=1, preamble=29, offset=10, temp_crnti=0x49
+User 0x49 connected
+Disconnecting rnti=0x49.
+RACH:  tti=8381, cc=0, pci=1, preamble=50, offset=10, temp_crnti=0x4a
+User 0x4a connected
+Disconnecting rnti=0x4a.
+RACH:  tti=9801, cc=0, pci=1, preamble=49, offset=10, temp_crnti=0x4b
+User 0x4b connected
+Stopping ..
+SCTP Association Shutdown. Association: 0
+Restarting S1 connection
+Failed to initiate S1 connection. Attempting reconnection in 10 seconds
+Closing stdin thread.
+Disconnecting rnti=0x4b.
