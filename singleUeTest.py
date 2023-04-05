@@ -68,3 +68,6 @@ with open("epc_output.txt", "a") as f1:
                     f4.write(output)
                     f4.flush()  # flush output to file
 
+            output = enb_call.stdout.readline()
+            f2.write(output)
+            f2.flush()  # flush output to file
