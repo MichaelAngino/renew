@@ -1,0 +1,54 @@
+Active RF plugins: libsrsran_rf_soapy.so libsrsran_rf_zmq.so
+Inactive RF plugins: 
+---  Software Radio Systems LTE eNodeB  ---
+
+Couldn't open , trying /root/.config/srsran/enb.conf
+Couldn't open /root/.config/srsran/enb.conf either, trying /etc/srsran/enb.conf
+Reading configuration file /etc/srsran/enb.conf...
+Couldn't open sib.conf, trying /root/.config/srsran/sib.conf
+Couldn't open /root/.config/srsran/sib.conf either, trying /etc/srsran/sib.conf
+Couldn't open rr.conf, trying /root/.config/srsran/rr.conf
+Couldn't open /root/.config/srsran/rr.conf either, trying /etc/srsran/rr.conf
+Couldn't open rb.conf, trying /root/.config/srsran/rb.conf
+Couldn't open /root/.config/srsran/rb.conf either, trying /etc/srsran/rb.conf
+
+Built in Release mode using commit ce8a3cae1 on branch master.
+
+Opening 1 channels in RF device=soapy with args=base_srate=1.92e6,id=7,rxant=RX
+Supported RF device list: soapy zmq file
+Soapy has found device #0: driver=iris, feSerial=FE3C000126, feVersion=1bc4026, firmware=2020.11.0.1-2-9a77733, fpga=2020.11.0.1-9a77733-ue, frontend=IRIS-FE-03-CBRS-X2c, label=IRIS-030E - RF3E000241, remote=tcp://168.6.246.165:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000241, 
+Soapy has found device #1: driver=iris, feSerial=FE3C000017, feVersion=1bc4026, firmware=2020.11.0.1-2-9a77733, fpga=2020.11.0.1-9a77733-ue, frontend=IRIS-FE-03-CBRSc, label=IRIS-030E - RF3E000392, remote=tcp://168.6.245.106:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000392, 
+Soapy has found device #2: driver=iris, feSerial=FE3C000199, feVersion=1bc4026, firmware=2020.11.0.1-2-9a77733, fpga=2020.11.0.1-9a77733-ue, frontend=IRIS-FE-03-CBRS-HI-X2c, label=IRIS-030E - RF3E000046, remote=tcp://168.6.244.100:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000046, 
+Soapy has found device #3: driver=iris, feSerial=FE3C000236, feVersion=1bc4026, firmware=2020.11.0.1-2-9a77733, fpga=2020.11.0.1-9a77733-ue, frontend=IRIS-FE-03-CBRS-HI-X2c, label=IRIS-030E - RF3E000058, remote=tcp://168.6.244.249:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000058, 
+Soapy has found device #4: driver=iris, feSerial=FE3C000226, feVersion=1bc4026, firmware=2021.05.0.0-54-c827532, fpga=2021.05.0.0-c827532-ue, frontend=IRIS-FE-03-CBRS-HI-X2c, label=IRIS-030E - RF3E000029, remote=tcp://168.6.244.228:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000029, 
+Soapy has found device #5: driver=iris, feSerial=FE3C000239, feVersion=1bc4026, firmware=2021.05.0.0-54-c827532, fpga=2021.05.0.0-c827532-ue, frontend=IRIS-FE-03-CBRS-HI-X2c, label=IRIS-030E - RF3E000027, remote=tcp://168.6.244.57:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000027, 
+Soapy has found device #6: driver=iris, feSerial=FE3C000225, feVersion=1bc4026, firmware=2021.05.0.0-54-c827532, fpga=2021.05.0.0-c827532-sdr, frontend=IRIS-FE-03-CBRS-HI-X2c, label=IRIS-030E - RF3E000286, remote=tcp://168.6.244.120:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000286, 
+Soapy has found device #7: driver=iris, firmware=2021.05.0.0-29-c33b541, fpga=2021.05.0.0-ef1456d-sdr, frontend=DEV, label=IRIS-030E - RF3E000095, remote=tcp://[fe80::3a3a:21ff:fe90:97%4]:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000095, 
+Soapy has found device #8: driver=iris, feSerial=FE3C000242, feVersion=1bc4026, firmware=2021.05.0.0-54-c827532, fpga=2021.05.0.0-c827532-sdr, frontend=IRIS-FE-03-CBRS-HI-X2c, label=IRIS-030E - RF3E000059, remote=tcp://168.6.244.102:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000059, 
+Soapy has found device #9: driver=iris, feSerial=FE3E000145, feVersion=1bc4026, firmware=2021.05.0.0-54-c827532, fpga=2021.05.0.0-c827532-sdr, frontend=IRIS-FE-03-CBRS-E-ISMe, label=IRIS-030E - RF3E000164, remote=tcp://168.6.244.229:55132, remote:driver=iris-arm, remote:type=iris, revision=Iris-030e, serial=RF3E000164, 
+Selecting Soapy device: 7
+Setting up Rx stream with 1 channel(s)
+Setting up Tx stream with 1 channel(s)
+Available device sensors: 
+ - ZYNQ_TEMP
+ - LMS7_TEMP
+ - CLKBUFF_LOCKED
+Available sensors for Rx channel 0: 
+Setting Rx channel 0 antenna to RX
+State of gain elements for Rx channel 0 (AGC not supported):
+ - LNA: 0.00 dB
+ - TIA: 0.00 dB
+ - PGA: 0.00 dB
+State of gain elements for Tx channel 0 (AGC not supported):
+ - PAD: 0.00 dB
+ - IAMP: 0.00 dB
+Rx antenna set to RX
+Tx antenna set to TRX
+
+==== eNodeB started ===
+Type <t> to view trace
+Setting frequency: DL=2680.0 Mhz, UL=2560.0 MHz for cc_idx=0 nof_prb=50
+RACH:  tti=3671, cc=0, pci=1, preamble=17, offset=12, temp_crnti=0x46
+RACH:  tti=3571, cc=0, pci=1, preamble=2, offset=12, temp_crnti=0x47
+User 0x47 connected
+Disconnecting rnti=0x46.

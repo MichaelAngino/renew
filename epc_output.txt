@@ -1,0 +1,54 @@
+
+Built in Release mode using commit ce8a3cae1 on branch master.
+
+
+---  Software Radio Systems EPC  ---
+
+Couldn't open , trying /root/.config/srsran/epc.conf
+Couldn't open /root/.config/srsran/epc.conf either, trying /etc/srsran/epc.conf
+Reading configuration file /etc/srsran/epc.conf...
+Couldn't open user_db.csv, trying /root/.config/srsran/user_db.csv
+Couldn't open /root/.config/srsran/user_db.csv either, trying /etc/srsran/user_db.csv
+HSS Initialized.
+MME S11 Initialized
+MME GTP-C Initialized
+MME Initialized. MCC: 0xf901, MNC: 0xff70
+SPGW GTP-U Initialized.
+SPGW S11 Initialized.
+SP-GW Initialized.
+Received S1 Setup Request.
+S1 Setup Request - eNB Name: srsenb01, eNB id: 0x19b
+S1 Setup Request - MCC:901, MNC:70
+S1 Setup Request - TAC 7, B-PLMN 0x9f107
+S1 Setup Request - Paging DRX v128
+Sending S1 Setup Response
+Initial UE message: NAS Message Type Unknown
+Received Initial UE message -- Service Request
+Service request -- S-TMSI 0x107a07e0
+Service request -- eNB UE S1AP Id 1
+Could not find IMSI from M-TMSI. M-TMSI 0x107a07e0
+Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
+Received Initial UE message -- Attach Request
+Attach request -- M-TMSI: 0x107a07e0
+Attach request -- eNB-UE S1AP Id: 2
+Attach request -- Attach type: 2
+Attach Request -- UE Network Capabilities EEA: 11110000
+Attach Request -- UE Network Capabilities EIA: 01110000
+Attach Request -- MS Network Capabilities Present: true
+PDN Connectivity Request -- EPS Bearer Identity requested: 0
+PDN Connectivity Request -- Procedure Transaction Id: 37
+PDN Connectivity Request -- ESM Information Transfer requested: true
+UL NAS: Received Identity Response
+ID Response -- IMSI: 901700000016943
+Downlink NAS: Sent Authentication Request
+UL NAS: Authentication Failure
+Authentication Failure -- Synchronization Failure
+Downlink NAS: Sent Authentication Request
+UL NAS: Received Authentication Response
+Authentication Response -- IMSI 901700000016943
+UE Authentication Accepted.
+Generating KeNB with UL NAS COUNT: 0
+Downlink NAS: Sending NAS Security Mode Command.
+UL NAS: Received Security Mode Complete
+Security Mode Command Complete -- IMSI: 901700000016943
+Sending ESM information request
