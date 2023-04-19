@@ -2,12 +2,25 @@ import subprocess
 import time
 import signal
 import os
+import sys
 
 subprocess_list = [] #stores subprocess so can close those process when script is killed
 
-def handle_interrupt(signal, frame):
+def handle_interrupt(signal, frame): 
+    """
+    This is here because I had some issues with the script killing all subprocesses, I am not sure if this is working or is needed
+    """
     print("Received Ctrl+C. Exiting...")
+    shutdown_fully()
     
+
+# Register the signal handler
+signal.signal(signal.SIGINT, handle_interrupt)
+
+def shutdown_fully():
+    print(subprocess_list)
+    for process in subprocess_list:
+        print(f"Process: {os.getpgid(process.pid)} ,")
     for process in subprocess_list:
         print(f"Calling Kill Command: ")
         print(f"sudo kill {os.getpgid(process.pid)}")
@@ -15,11 +28,7 @@ def handle_interrupt(signal, frame):
         subprocess.run(sudo_cmd.split())
     
     exit(0)
-
-# Register the signal handler
-signal.signal(signal.SIGINT, handle_interrupt)
-
-
+    
 
 
 
@@ -31,9 +40,11 @@ ENB_OUTPUT_FILENAME = "enb_output.txt"
 IPERF_CLIENT_OUTPUT_FILENAME = "iperf_client.txt"
 IPERF_SERVER_OUTPUT_FILENAME = "iperf_server.txt"
 
-IPERF_RESULTS_FILENAME = "/home/srscore/renewCellularTests/renew/results.txt" # Where Final Output is outputted too
+IPERF_RESULTS_PATH= "/home/srscore/renewCellularTests/renew/" # Where Final Output is outputted too
+IPERF_RESULTS_FILENAME = "results.txt" # Name of output file on phone 
 
-IPERF_RESULTS_ANDROID_TEMPFILE_FILENAME = "iperf_results.txt" #file created on phone to store iperf results
+TEST_TIME = 30
+
 
 with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output command line outputs too
     with open( ENB_OUTPUT_FILENAME, "w") as enb_output_text:
@@ -42,8 +53,8 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
 
 
                 #Sets up EPC and ENB
-                epc_call = subprocess.Popen(["sudo", "srsepc"], stdin=subprocess.PIPE, stdout=epc_output_text, stderr=subprocess.PIPE, text=True) 
-                enb_call = subprocess.Popen(["sudo", "srsenb"], stdin=subprocess.PIPE, stdout=enb_output_text, stderr=subprocess.PIPE, text=True)
+                epc_call = subprocess.Popen(["sudo", "srsepc"], stdin=subprocess.PIPE, stdout=epc_output_text, stderr=subprocess.PIPE, text=True, preexec_fn=os.setpgrp) 
+                enb_call = subprocess.Popen(["sudo", "srsenb"], stdin=subprocess.PIPE, stdout=enb_output_text, stderr=subprocess.PIPE, text=True, preexec_fn=os.setpgrp)
 
                 subprocess_list.append(epc_call)
                 subprocess_list.append(enb_call)
@@ -67,35 +78,47 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
                 print("Found Connected UE starting Iperf")
 
                 #Start Iperf Servers
-                iperf_server = subprocess.Popen(["iperf3","-s" ], stdin=subprocess.PIPE, stdout=iperf_server_text, stderr=subprocess.PIPE, text=True)
-                iperf_client = subprocess.Popen(["adb shell"], stdin=subprocess.PIPE, stdout=iperf_client_text, stderr=subprocess.PIPE, text=True, shell=True) #assumes adb deamon is running
+                iperf_server = subprocess.Popen(["iperf3","-s" ], stdin=subprocess.PIPE, stdout=iperf_server_text, stderr=subprocess.PIPE, text=True, preexec_fn=os.setpgrp )
+                iperf_client = subprocess.Popen(["adb shell"], stdin=subprocess.PIPE, stdout=iperf_client_text, stderr=subprocess.PIPE, text=True, shell=True, preexec_fn=os.setpgrp) #assumes adb deamon is running
 
                 subprocess_list.append(iperf_server)
                 subprocess_list.append(iperf_client)
-
-                # iperf_client.stdin.write("ls \n")
-                # iperf_client.stdin.flush()
 
                 iperf_client.stdin.write("cd /data/local/tmp \n")
                 iperf_client.stdin.flush()
 
                 time.sleep(.5)
 
-                iperf_client.stdin.write(f"./iperf3 -c {ENB_IP_ADDRESS} --logfile {IPERF_RESULTS_ANDROID_TEMPFILE_FILENAME}\n")
+                iperf_client.stdin.write(f"rm {IPERF_RESULTS_FILENAME} \n") # Removing old log file from previous runs 
+                iperf_client.stdin.flush()
+                
+                iperf_client.stdin.write(f"./iperf3 -V -t {TEST_TIME} -c {ENB_IP_ADDRESS} --logfile {IPERF_RESULTS_FILENAME}\n")
                 iperf_client.stdin.flush()
 
-                time.sleep(10)
+                time.sleep(TEST_TIME+2)
 
-                iperf_client.stdin.write("exit")
-                iperf_client.stdin.write(f"adb pull /data/local/tmp {IPERF_RESULTS_FILENAME} ")
+                print("IPerf Done, Transferring Results Now")
+
+                if(len(sys.argv) == 1): # if command line argument for name add it otherwise just call it results
+                    transfer_process = subprocess.Popen(["adb","pull", f"/data/local/tmp/{IPERF_RESULTS_FILENAME}", f"{IPERF_RESULTS_PATH}" ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+                else:
+                    IPERF_INPUT_NAME = sys.argv[1]
+
+                    transfer_process = subprocess.Popen(["adb","pull", f"/data/local/tmp/{IPERF_RESULTS_FILENAME}", f"{IPERF_RESULTS_PATH}/{IPERF_INPUT_NAME}.txt" ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+                time.sleep(5)
+                transfer_process.kill()            
+
                 
-
 
                 # with open("error.txt", "w") as f1:
                 #     while True:
                 #         output = iperf_client.stderr.readline()
                 #         f1.write(output)
                 #         f1.flush()  # flush output to file
+
+shutdown_fully()
 
 
 # Gather outputs from commands
