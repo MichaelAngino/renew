@@ -22,67 +22,59 @@ S1 Setup Request - MCC:901, MNC:70
 S1 Setup Request - TAC 7, B-PLMN 0x9f107
 S1 Setup Request - Paging DRX v128
 Sending S1 Setup Response
-Initial UE message: NAS Message Type Unknown
-Received Initial UE message -- Service Request
-Service request -- S-TMSI 0x5cc9db91
-Service request -- eNB UE S1AP Id 1
-Could not find IMSI from M-TMSI. M-TMSI 0x5cc9db91
 Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
 Received Initial UE message -- Attach Request
-Attach request -- M-TMSI: 0x5cc9db91
+Attach request -- IMSI: 310710000000001
+Attach request -- eNB-UE S1AP Id: 1
+Attach request -- Attach type: 2
+Attach Request -- UE Network Capabilities EEA: 11110000
+Attach Request -- UE Network Capabilities EIA: 01110000
+Attach Request -- MS Network Capabilities Present: true
+PDN Connectivity Request -- EPS Bearer Identity requested: 0
+PDN Connectivity Request -- Procedure Transaction Id: 44
+PDN Connectivity Request -- ESM Information Transfer requested: true
+User not found at HSS. IMSI: 310710000000001
+User not found. IMSI 310710000000001
+Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
+Received Initial UE message -- Attach Request
+Attach request -- IMSI: 310710000000001
 Attach request -- eNB-UE S1AP Id: 2
 Attach request -- Attach type: 2
 Attach Request -- UE Network Capabilities EEA: 11110000
 Attach Request -- UE Network Capabilities EIA: 01110000
 Attach Request -- MS Network Capabilities Present: true
 PDN Connectivity Request -- EPS Bearer Identity requested: 0
-PDN Connectivity Request -- Procedure Transaction Id: 19
+PDN Connectivity Request -- Procedure Transaction Id: 45
 PDN Connectivity Request -- ESM Information Transfer requested: true
-UL NAS: Received Identity Response
-ID Response -- IMSI: 901700000016943
-Downlink NAS: Sent Authentication Request
-UL NAS: Received Authentication Response
-Authentication Response -- IMSI 901700000016943
-UE Authentication Accepted.
-Generating KeNB with UL NAS COUNT: 0
-Downlink NAS: Sending NAS Security Mode Command.
-UL NAS: Received Security Mode Complete
-Security Mode Command Complete -- IMSI: 901700000016943
-Sending ESM information request
-UL NAS: Received ESM Information Response
-ESM Info: APN test123
-Getting subscription information -- QCI 9
-Sending Create Session Request.
-Creating Session Response -- IMSI: 901700000016943
-Creating Session Response -- MME control TEID: 1
-Received GTP-C PDU. Message type: GTPC_MSG_TYPE_CREATE_SESSION_REQUEST
-SPGW: Allocated Ctrl TEID 1
-SPGW: Allocated User TEID 1
-SPGW: Allocate UE IP 172.16.0.2
-Received Create Session Response
-Create Session Response -- SPGW control TEID 1
-Create Session Response -- SPGW S1-U Address: 127.0.1.100
-SPGW Allocated IP 172.16.0.2 to IMSI 901700000016943
-Adding attach accept to Initial Context Setup Request
-Sent Initial Context Setup Request. E-RAB id 5 
-Received Initial Context Setup Response
-E-RAB Context Setup. E-RAB id 5
-E-RAB Context -- eNB TEID 0x1; eNB GTP-U Address 127.0.1.1
-UL NAS: Received Attach Complete
-Unpacked Attached Complete Message. IMSI 901700000016943
-Unpacked Activate Default EPS Bearer message. EPS Bearer id 5
-Received GTP-C PDU. Message type: GTPC_MSG_TYPE_MODIFY_BEARER_REQUEST
-Sending EMM Information
-Received UE Context Release Request. MME-UE S1AP Id 1
-No UE context to release found. MME-UE S1AP Id: 1
-Received UE Context Release Request. MME-UE S1AP Id 2
-There are active E-RABs, send release access bearers request
-Received GTP-C PDU. Message type: GTPC_MSG_TYPE_RELEASE_ACCESS_BEARERS_REQUEST
-Received UE Context Release Complete. MME-UE S1AP Id 2
-UE Context Release Completed.
+User not found at HSS. IMSI: 310710000000001
+User not found. IMSI 310710000000001
+Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
+Received Initial UE message -- Attach Request
+Attach request -- IMSI: 310710000000001
+Attach request -- eNB-UE S1AP Id: 3
+Attach request -- Attach type: 2
+Attach Request -- UE Network Capabilities EEA: 11110000
+Attach Request -- UE Network Capabilities EIA: 01110000
+Attach Request -- MS Network Capabilities Present: true
+PDN Connectivity Request -- EPS Bearer Identity requested: 0
+PDN Connectivity Request -- Procedure Transaction Id: 46
+PDN Connectivity Request -- ESM Information Transfer requested: true
+User not found at HSS. IMSI: 310710000000001
+User not found. IMSI 310710000000001
+Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
+Received Initial UE message -- Attach Request
+Attach request -- IMSI: 310710000000001
+Attach request -- eNB-UE S1AP Id: 4
+Attach request -- Attach type: 2
+Attach Request -- UE Network Capabilities EEA: 11110000
+Attach Request -- UE Network Capabilities EIA: 01110000
+Attach Request -- MS Network Capabilities Present: true
+PDN Connectivity Request -- EPS Bearer Identity requested: 0
+PDN Connectivity Request -- Procedure Transaction Id: 47
+PDN Connectivity Request -- ESM Information Transfer requested: true
+User not found at HSS. IMSI: 310710000000001
+User not found. IMSI 310710000000001
 Stopping ..
 Deleting eNB context. eNB Id: 0x19b
-Deleting UE EMM context. IMSI: 901700000016943
-Deleting SP-GW GTP-C Tunnel. IMSI: 901700000016943
 
 ---  exiting  ---

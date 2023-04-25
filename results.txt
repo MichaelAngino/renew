@@ -1,38 +1,49 @@
 iperf 3.13
 Linux localhost 5.10.101-android12-9-00017-ge660be55c683-ab9041535 #1 SMP PREEMPT Wed Sep 7 03:07:40 UTC 2022 armv8l
-Time: Thu, 13 Apr 2023 20:46:19 GMT
+Time: Mon, 24 Apr 2023 21:25:24 GMT
 Connecting to host 172.16.0.1, port 5201
-      Cookie: tgb6mfbbnkadmzc3j4pdy4q2epvyapicewm7
+      Cookie: pmvzufs544yexgvqwl67ruiioorooqfun4y2
       TCP MSS: 1448 (default)
-[  6] local 172.16.0.2 port 49598 connected to 172.16.0.1 port 5201
+[  6] local 172.16.0.2 port 49620 connected to 172.16.0.1 port 5201
 Starting Test: protocol: TCP, 1 streams, 131072 byte blocks, omitting 0 seconds, 30 second test, tos 0
 [ ID] Interval           Transfer     Bitrate         Retr  Cwnd
-[  6]   0.00-1.00   sec   506 KBytes  4.14 Mbits/sec    1   31.1 KBytes       
-[  6]   1.00-2.00   sec  0.00 Bytes  0.00 bits/sec    0   45.2 KBytes       
-[  6]   2.00-3.00   sec   249 KBytes  2.04 Mbits/sec    0    124 KBytes       
-[  6]   3.00-4.00   sec   379 KBytes  3.10 Mbits/sec    0    226 KBytes       
-[  6]   4.00-5.00   sec  0.00 Bytes  0.00 bits/sec    0    307 KBytes       
-[  6]   5.00-6.00   sec  0.00 Bytes  0.00 bits/sec    0    307 KBytes       
-[  6]   6.00-7.00   sec  0.00 Bytes  0.00 bits/sec    0    455 KBytes       
-[  6]   7.00-8.00   sec  0.00 Bytes  0.00 bits/sec    0    489 KBytes       
-[  6]   8.00-9.00   sec  0.00 Bytes  0.00 bits/sec    0    590 KBytes       
-[  6]   9.00-10.00  sec  0.00 Bytes  0.00 bits/sec    0    612 KBytes       
-[  6]  10.00-11.00  sec  0.00 Bytes  0.00 bits/sec    0    636 KBytes       
-[  6]  11.00-12.00  sec  0.00 Bytes  0.00 bits/sec    0    677 KBytes       
-[  6]  12.00-13.00  sec   373 KBytes  3.06 Mbits/sec    0    693 KBytes       
-[  6]  13.00-14.00  sec  0.00 Bytes  0.00 bits/sec   25    426 KBytes       
-[  6]  14.00-15.00  sec  0.00 Bytes  0.00 bits/sec    0    426 KBytes       
-[  6]  15.00-16.00  sec  0.00 Bytes  0.00 bits/sec   20    344 KBytes       
-[  6]  16.00-17.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  17.00-18.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  18.00-19.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  19.00-20.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  20.00-21.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  21.00-22.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  22.00-23.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  23.00-24.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  24.00-25.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  25.00-26.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  26.00-27.00  sec  0.00 Bytes  0.00 bits/sec    0    344 KBytes       
-[  6]  27.00-28.00  sec  0.00 Bytes  0.00 bits/sec    1   1.41 KBytes       
-[  6]  28.00-29.00  sec  0.00 Bytes  0.00 bits/sec    0   1.41 KBytes       
+[  6]   0.00-1.00   sec   506 KBytes  4.14 Mbits/sec    0   22.6 KBytes       
+[  6]   1.00-2.00   sec  0.00 Bytes  0.00 bits/sec    0   84.8 KBytes       
+[  6]   2.00-3.00   sec  0.00 Bytes  0.00 bits/sec    0    107 KBytes       
+[  6]   3.00-4.00   sec   334 KBytes  2.74 Mbits/sec    0    156 KBytes       
+[  6]   4.00-5.00   sec  0.00 Bytes  0.00 bits/sec    0    222 KBytes       
+[  6]   5.00-6.00   sec  0.00 Bytes  0.00 bits/sec    0    225 KBytes       
+[  6]   6.00-7.00   sec   426 KBytes  3.49 Mbits/sec    0    445 KBytes       
+[  6]   7.00-8.00   sec  0.00 Bytes  0.00 bits/sec    0    445 KBytes       
+[  6]   8.00-9.00   sec  0.00 Bytes  0.00 bits/sec    0    513 KBytes       
+[  6]   9.00-10.00  sec  0.00 Bytes  0.00 bits/sec    0    513 KBytes       
+[  6]  10.00-11.00  sec  0.00 Bytes  0.00 bits/sec    0    595 KBytes       
+[  6]  11.00-12.00  sec  0.00 Bytes  0.00 bits/sec    0    595 KBytes       
+[  6]  12.00-13.00  sec  0.00 Bytes  0.00 bits/sec    0    595 KBytes       
+[  6]  13.00-14.00  sec  0.00 Bytes  0.00 bits/sec    0    595 KBytes       
+[  6]  14.00-15.00  sec  0.00 Bytes  0.00 bits/sec    0    595 KBytes       
+[  6]  15.00-16.00  sec  0.00 Bytes  0.00 bits/sec    0    690 KBytes       
+[  6]  16.00-17.00  sec  0.00 Bytes  0.00 bits/sec    0    690 KBytes       
+[  6]  17.00-18.00  sec  0.00 Bytes  0.00 bits/sec    0    690 KBytes       
+[  6]  18.00-19.00  sec  0.00 Bytes  0.00 bits/sec    0    690 KBytes       
+[  6]  19.00-20.00  sec  0.00 Bytes  0.00 bits/sec    0    694 KBytes       
+[  6]  20.00-21.00  sec  0.00 Bytes  0.00 bits/sec    0    694 KBytes       
+[  6]  21.00-22.00  sec  0.00 Bytes  0.00 bits/sec    0    694 KBytes       
+[  6]  22.00-23.00  sec  0.00 Bytes  0.00 bits/sec    1    584 KBytes       
+[  6]  23.00-24.00  sec  0.00 Bytes  0.00 bits/sec    0    584 KBytes       
+[  6]  24.00-25.00  sec  0.00 Bytes  0.00 bits/sec    0    584 KBytes       
+[  6]  25.00-26.00  sec  0.00 Bytes  0.00 bits/sec    0    584 KBytes       
+[  6]  26.00-27.00  sec  0.00 Bytes  0.00 bits/sec    0    584 KBytes       
+[  6]  27.00-28.00  sec  0.00 Bytes  0.00 bits/sec   34    365 KBytes       
+[  6]  28.00-29.00  sec  0.00 Bytes  0.00 bits/sec    6    359 KBytes       
+[  6]  29.00-30.00  sec  0.00 Bytes  0.00 bits/sec  192    284 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+Test Complete. Summary Results:
+[ ID] Interval           Transfer     Bitrate         Retr
+[  6]   0.00-30.00  sec  1.24 MBytes   346 Kbits/sec  233             sender
+[  6]   0.00-30.94  sec  1.14 MBytes   309 Kbits/sec                  receiver
+CPU Utilization: local/sender 0.4% (0.2%u/0.2%s), remote/receiver 0.0% (0.0%u/0.0%s)
+snd_tcp_congestion cubic
+rcv_tcp_congestion cubic
+
+iperf Done.
