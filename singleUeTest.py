@@ -69,19 +69,13 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
 
 
                #Sets up EPC and ENB
-               epc_call = subprocess.Popen(["sudo", "srsepc"], stdin=subprocess.PIPE, stdout=epc_output_text, stderr=subprocess.PIPE, text=True, preexec_fn=os.setpgrp)
+               # note preexec_fn=os.setpgrp is added to .Popen calls so shutdown_fully function can get the pids off the subprocesses
+               epc_call = subprocess.Popen(["sudo", "srsepc"], stdin=subprocess.PIPE, stdout=epc_output_text, stderr=subprocess.PIPE, text=True, preexec_fn=os.setpgrp) 
                enb_call = subprocess.Popen(["sudo", "srsenb"], stdin=subprocess.PIPE, stdout=enb_output_text, stderr=subprocess.PIPE, text=True, preexec_fn=os.setpgrp)
 
 
                subprocess_list.append(epc_call)
                subprocess_list.append(enb_call)
-
-
-
-
-
-
-
 
 
 
