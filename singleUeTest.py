@@ -5,12 +5,14 @@ import os
 import sys
 
 
+################## Shutdown Functions and Handlers ##############################
+
 subprocess_list = [] #stores subprocess so can close those process when script is killed
 
 
 def handle_interrupt(signal, frame):
    """
-   This is here because I had some issues with the script killing all subprocesses, I am not sure if this is working or is needed
+   Here to shutdown fully when hitting ctrl+c
    """
    print("Received Ctrl+C. Exiting...")
    shutdown_fully()
@@ -35,10 +37,9 @@ def shutdown_fully():
   
 
 
+################################## Constants for Program #####################################
+
 USER_NAME = "srscore" # CHANGE NAME WHEN SWITCHING COMPUTERS
-
-
-
 
 UE_IP_ADDRESS = "172.16.0.2" # I believe this is always the same
 ENB_IP_ADDRESS = "172.16.0.1"
@@ -57,7 +58,7 @@ IPERF_RESULTS_FILENAME = "results.txt" # Name of output file on phone
 TEST_TIME = 30
 
 
-
+############################### Test Script #############################################
 
 with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output command line outputs too
    with open( ENB_OUTPUT_FILENAME, "w") as enb_output_text:
@@ -131,7 +132,7 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
                print("IPerf Done, Transferring Results Now")
 
 
-               if(len(sys.argv) == 1): # if command line argument for name add it otherwise just call it results
+               if(len(sys.argv) == 1): # if command line argument for name add it otherwise just call it results.txt
                    print(f"Pulling from phone and saving with name {IPERF_RESULTS_PATH}/{IPERF_RESULTS_FILENAME}")
                    transfer_process = subprocess.Popen(["adb","pull", f"/data/local/tmp/{IPERF_RESULTS_FILENAME}", f"{IPERF_RESULTS_PATH}/results.txt" ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
@@ -164,18 +165,6 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
                time.sleep(3) # a delay to make sure transfers are done, not sure if needed
                transfer_process.kill()
 
-
-              
-
-
-              
-  
-
-
-              
-
-
-              
 
 
 shutdown_fully()

@@ -22,58 +22,6 @@ S1 Setup Request - MCC:901, MNC:70
 S1 Setup Request - TAC 7, B-PLMN 0x9f107
 S1 Setup Request - Paging DRX v128
 Sending S1 Setup Response
-Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
-Received Initial UE message -- Attach Request
-Attach request -- IMSI: 310710000000001
-Attach request -- eNB-UE S1AP Id: 1
-Attach request -- Attach type: 2
-Attach Request -- UE Network Capabilities EEA: 11110000
-Attach Request -- UE Network Capabilities EIA: 01110000
-Attach Request -- MS Network Capabilities Present: true
-PDN Connectivity Request -- EPS Bearer Identity requested: 0
-PDN Connectivity Request -- Procedure Transaction Id: 44
-PDN Connectivity Request -- ESM Information Transfer requested: true
-User not found at HSS. IMSI: 310710000000001
-User not found. IMSI 310710000000001
-Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
-Received Initial UE message -- Attach Request
-Attach request -- IMSI: 310710000000001
-Attach request -- eNB-UE S1AP Id: 2
-Attach request -- Attach type: 2
-Attach Request -- UE Network Capabilities EEA: 11110000
-Attach Request -- UE Network Capabilities EIA: 01110000
-Attach Request -- MS Network Capabilities Present: true
-PDN Connectivity Request -- EPS Bearer Identity requested: 0
-PDN Connectivity Request -- Procedure Transaction Id: 45
-PDN Connectivity Request -- ESM Information Transfer requested: true
-User not found at HSS. IMSI: 310710000000001
-User not found. IMSI 310710000000001
-Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
-Received Initial UE message -- Attach Request
-Attach request -- IMSI: 310710000000001
-Attach request -- eNB-UE S1AP Id: 3
-Attach request -- Attach type: 2
-Attach Request -- UE Network Capabilities EEA: 11110000
-Attach Request -- UE Network Capabilities EIA: 01110000
-Attach Request -- MS Network Capabilities Present: true
-PDN Connectivity Request -- EPS Bearer Identity requested: 0
-PDN Connectivity Request -- Procedure Transaction Id: 46
-PDN Connectivity Request -- ESM Information Transfer requested: true
-User not found at HSS. IMSI: 310710000000001
-User not found. IMSI 310710000000001
-Initial UE message: LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST
-Received Initial UE message -- Attach Request
-Attach request -- IMSI: 310710000000001
-Attach request -- eNB-UE S1AP Id: 4
-Attach request -- Attach type: 2
-Attach Request -- UE Network Capabilities EEA: 11110000
-Attach Request -- UE Network Capabilities EIA: 01110000
-Attach Request -- MS Network Capabilities Present: true
-PDN Connectivity Request -- EPS Bearer Identity requested: 0
-PDN Connectivity Request -- Procedure Transaction Id: 47
-PDN Connectivity Request -- ESM Information Transfer requested: true
-User not found at HSS. IMSI: 310710000000001
-User not found. IMSI 310710000000001
 Stopping ..
 Deleting eNB context. eNB Id: 0x19b
 
