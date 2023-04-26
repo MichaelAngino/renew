@@ -118,9 +118,13 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
 
                time.sleep(.5)
 
+              
+              # Removing old log file from previous runs
 
-               iperf_client.stdin.write(f"rm {IPERF_RESULTS_FILENAME} \n") # Removing old log file from previous runs
+               iperf_client.stdin.write(f"rm {IPERF_RESULTS_FILENAME} \n") 
                iperf_client.stdin.flush()
+
+               # Run iperf and save to file
               
                iperf_client.stdin.write(f"./iperf3 -V -t {TEST_TIME} -c {ENB_IP_ADDRESS} --logfile {IPERF_RESULTS_FILENAME}\n")
                iperf_client.stdin.flush()
@@ -128,11 +132,11 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
 
                time.sleep(TEST_TIME+2)
 
-
+               # Pull Iperf results from phone to computer
                print("IPerf Done, Transferring Results Now")
 
 
-               if(len(sys.argv) == 1): # if command line argument for name add it otherwise just call it results.txt
+               if(len(sys.argv) == 1): # if there is command line arguments for name add it otherwise just call it results.txt
                    print(f"Pulling from phone and saving with name {IPERF_RESULTS_PATH}/{IPERF_RESULTS_FILENAME}")
                    transfer_process = subprocess.Popen(["adb","pull", f"/data/local/tmp/{IPERF_RESULTS_FILENAME}", f"{IPERF_RESULTS_PATH}/results.txt" ], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
@@ -146,6 +150,7 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
 
 
 
+            ############ This while loop enables me to poll an error stream from a subprocess, usefull if you think one of the commands is erroring ##########
 
             #    with open("error.txt", "w") as f1:
             #        with open("errorOUT.txt", "w") as f3:
@@ -158,21 +163,19 @@ with open(EPC_OUTPUT_FILENAME, "w") as epc_output_text: # Opens files to output 
             #                f3.write(output)
             #                f3.flush()  # flush output to file      
 
-
+            ################## End Debugging Error Loop ##################
              
 
 
-               time.sleep(3) # a delay to make sure transfers are done, not sure if needed
+               time.sleep(3) # a delay to make sure transfers are done, this is probably overkill
                transfer_process.kill()
 
 
 
-shutdown_fully()
+shutdown_fully() #kills all subprocesses 
 
 
 
-
-# Gather outputs from commands
 
 
 
